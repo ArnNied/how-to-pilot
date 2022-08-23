@@ -18,10 +18,13 @@ module.exports = {
           dark: "#EDC49D",
         },
         secondary: {
+          lighter: "#787878",
+          light: "#2F3266",
           base: "#202020",
         },
         tertiary: {
-          base: "#FF8906",
+          orange: "#FF8906",
+          blue: "#4263E4",
         },
       },
     },

@@ -21,7 +21,7 @@ const HeroSection: NextPage = () => {
           <div className="w-fit flex relative group">
             <span className="absolute w-full h-full bg-primary-base group-hover:bg-black border border-gray-500 rounded -z-10 translate-x-1 translate-y-1"></span>
             <Link href="#">
-              <a className="w-full flex items-center justify-center px-16 py-2 bg-secondary-base hover:bg-tertiary-base font-semibold text-white hover:text-black border border-black rounded">
+              <a className="w-full flex items-center justify-center px-16 py-2 bg-secondary-base hover:bg-tertiary-orange font-semibold text-white hover:text-black border border-black rounded">
                 Join Now
               </a>
             </Link>
@@ -30,7 +30,7 @@ const HeroSection: NextPage = () => {
       </div>
       <div className="w-5/12 px-8">
         <div className="relative w-full h-full">
-          <Image src="/assets/images/hero-image.svg" layout="fill" />
+          <Image src="/assets/images/index/hero/hero-image.svg" layout="fill" />
         </div>
       </div>
     </div>
