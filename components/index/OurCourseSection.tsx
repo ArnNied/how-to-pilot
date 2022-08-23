@@ -52,11 +52,11 @@ const OurCourseSection: NextPage = () => {
           Browse Our Best Courses
         </h3>
       </div>
-      <div className="flex flex-row space-x-4 mt-16">
+      <div className="flex flex-row px-12 mt-16 space-x-4">
         {SELECTED_COURSES.map(({ key, icon, title, description, link }) => (
           <div
             key={key}
-            className="w-1/5 flex flex-col p-8 bg-white hover:bg-primary-base rounded box-shadow-on-hover-with-ring-br"
+            className="w-1/5 flex flex-col p-8 bg-white hover:bg-primary-base rounded-lg box-shadow-on-hover-with-ring-br"
           >
             <div className="h-full flex flex-col justify-between space-y-2">
               <div className="flex flex-col">
