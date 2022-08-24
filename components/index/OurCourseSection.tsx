@@ -45,10 +45,8 @@ const OurCourseSection: NextPage = () => {
   return (
     <div className="flex flex-col px-32 py-16">
       <div className="flex flex-col space-y-4">
-        <h2 className="text-secondary-base text-opacity-50 text-center">
-          Our Course
-        </h2>
-        <h3 className="font-bold text-secondary-base text-3xl text-center">
+        <h2 className="text-black text-opacity-50 text-center">Our Course</h2>
+        <h3 className="font-bold text-3xl text-center">
           Browse Our Best Courses
         </h3>
       </div>

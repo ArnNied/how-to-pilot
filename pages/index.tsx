@@ -1,6 +1,7 @@
 import type { NextPage } from "next"
 
 import Navbar from "../components/common/Navbar"
+import AboutUsSection from "../components/index/AboutUsSection"
 import HeroSection from "../components/index/HeroSection"
 import OurCourseSection from "../components/index/OurCourseSection"
 import TrustedSection from "../components/index/TrustedSection"
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
       <TrustedSection />
       <OurCourseSection />
       <WhyUsSection />
+      <AboutUsSection />
     </>
   )
 }
