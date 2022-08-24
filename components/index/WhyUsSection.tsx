@@ -47,13 +47,10 @@ const WhyUsSection: NextPage = () => {
         const child = siblings.item(i)
 
         if (i === clickedElementIndex) {
-          // child?.classList.toggle("space-y-2")
-          child?.children?.item(1)?.classList.toggle("max-h-64")
-          // child?.children?.item(1)?.classList.toggle("max-h-0")
+          child?.children?.item(1)?.classList.toggle("!max-h-64")
           child?.children?.item(1)?.classList.toggle("pb-4")
         } else {
-          // child?.classList.remove("space-y-2")
-          child?.children?.item(1)?.classList.remove("max-h-64", "pb-4")
+          child?.children?.item(1)?.classList.remove("!max-h-64", "pb-4")
         }
       }
     }
