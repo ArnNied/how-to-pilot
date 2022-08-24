@@ -34,24 +34,33 @@ const CONTENT = [
 ]
 
 const WhyUsSection: NextPage = () => {
-  const [active, setActive] = useState(0)
-
-  function handleToggleText(index: number) {
-    setActive(index)
-
-    const el = document.getElementById(
-      convertToId(CONTENT[index].title as string)
+  function handleToggleText(clickedElementIndex: number) {
+    const clickedEl = document.getElementById(
+      convertToId(CONTENT[clickedElementIndex].title)
     )
-    if (el?.classList.contains("max-h-0")) {
-      el?.classList.replace("max-h-0", "max-h-64")
-    } else {
-      el?.classList.replace("max-h-64", "max-h-0")
+
+    // First parent is the container for X (clicked)
+    // Second parent is the container for siblings of element containing X
+    const siblings = clickedEl?.parentElement?.parentElement?.children
+    if (siblings) {
+      for (let i = 0; i < siblings?.length; i++) {
+        const child = siblings.item(i)
+
+        if (i === clickedElementIndex) {
+          // child?.classList.toggle("space-y-2")
+          child?.children?.item(1)?.classList.toggle("max-h-64")
+          // child?.children?.item(1)?.classList.toggle("max-h-0")
+          child?.children?.item(1)?.classList.toggle("pb-4")
+        } else {
+          // child?.classList.remove("space-y-2")
+          child?.children?.item(1)?.classList.remove("max-h-64", "pb-4")
+        }
+      }
     }
-    el?.parentElement?.classList.toggle("space-y-2")
   }
 
   return (
-    <div className="flex flex-row justify-center px-32 py-16 space-x-12">
+    <div className="flex flex-row px-32 py-16 space-x-12">
       <div className="w-7/12 flex items-center">
         <div className="relative w-full h-96">
           <Image
@@ -61,32 +70,28 @@ const WhyUsSection: NextPage = () => {
         </div>
       </div>
       <div className="w-5/12 flex flex-col space-y-4">
-        <h2 className="text-sm text-secondary-base text-opacity-50 text-end">
-          Why Us
-        </h2>
+        <h2 className="text-sm text-black text-opacity-50 text-end">Why Us</h2>
         <h3 className="font-bold text-3xl text-end">
           We make best feature for your support
         </h3>
         <div className="flex flex-col divide-y-2 divide-secondary-lighter divide-opacity-50">
           {CONTENT.map(({ title, description, link }, index) => (
-            <div
-              key={title}
-              onClick={() => handleToggleText(index)}
-              className="flex flex-col py-4"
-            >
-              <button className="flex flex-row items-center px-4 space-x-4">
-                <div className="w-1/12 h-fit">0{index + 1}</div>
+            <div key={title} className="flex flex-col">
+              <button
+                onClick={() => handleToggleText(index)}
+                className="flex flex-row items-center py-4 space-x-4"
+              >
+                <div className="w-1/12 h-fit font-bold text-black text-opacity-50 text-start">
+                  0{index + 1}
+                </div>
                 <div className="w-11/12 flex flex-row justify-between">
-                  <h4 className="flex font-semibold text-secondary-base">
-                    {title}
-                  </h4>
+                  <h4 className="flex font-semibold ">{title}</h4>
                   <div className="flex">V</div>
                 </div>
               </button>
-              {/* TODO: onclick expand show description */}
               <div
                 id={convertToId(title)}
-                className="flex flex-row px-4 space-x-4 max-h-0 overflow-hidden transition-all ease-out duration-300"
+                className="flex flex-row space-x-4 max-h-0 overflow-hidden transition-all ease-out duration-300"
               >
                 <div className="w-1/12"></div>
                 <div className="w-11/12 flex flex-col space-y-2">
