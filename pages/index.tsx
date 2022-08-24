@@ -1,5 +1,6 @@
 import type { NextPage } from "next"
 
+import Footer from "../components/common/Footer"
 import Navbar from "../components/common/Navbar"
 import AboutUsSection from "../components/index/AboutUsSection"
 import HeroSection from "../components/index/HeroSection"
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
       <OurCourseSection />
       <WhyUsSection />
       <AboutUsSection />
+      <Footer />
     </>
   )
 }

@@ -25,6 +25,7 @@ module.exports = {
         tertiary: {
           orange: "#FF8906",
           blue: "#4263E4",
+          salmon: "#FF8A8A",
         },
       },
     },
