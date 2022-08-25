@@ -6,16 +6,20 @@ import Arrow from "~/assets/icons/common/arrow-right.svg"
 const CommonNavbar: NextPage = () => {
   return (
     <nav className="fixed w-full flex flex-row bg-primary-base border-b-2 border-black divide-x-2 divide-black z-50">
-      <div className="w-4/12 flex items-center justify-center">
-        <div className="relative p-8">
-          <Image
-            src="/assets/images/common/howtopilot-logo.svg"
-            layout="fill"
-          />
-        </div>
-        <h1 className="font-bold text-4xl">HowToPilot</h1>
+      <div className="w-4/12">
+        <Link href="/">
+          <a className="w-full h-full flex items-center justify-center">
+            <div className="relative p-8">
+              <Image
+                src="/assets/images/common/howtopilot-logo.svg"
+                layout="fill"
+              />
+            </div>
+            <h1 className="font-bold text-4xl">HowToPilot</h1>
+          </a>
+        </Link>
       </div>
-      <Link href="#">
+      <Link href="/course">
         <a className="flex grow items-center justify-center p-4 hover:bg-tertiary-orange font-semibold">
           Courses
         </a>

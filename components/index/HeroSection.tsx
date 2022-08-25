@@ -4,7 +4,7 @@ import Link from "next/link"
 
 const HeroSection: NextPage = () => {
   return (
-    <div className="h-screen flex flex-row pt-20">
+    <div className="h-screen flex flex-row -mt-20">
       <div className="w-7/12 flex items-center">
         <div className="flex flex-col md:px-16 lg:px-24 space-y-8">
           <div className="w-fit flex items-center space-x-4">
@@ -28,7 +28,7 @@ const HeroSection: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="w-5/12 px-8">
+      <div className="w-5/12 px-8 py-24">
         <div className="relative w-full h-full">
           <Image src="/assets/images/index/hero/hero-image.svg" layout="fill" />
         </div>

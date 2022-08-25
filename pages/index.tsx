@@ -11,13 +11,13 @@ import WhyUsSection from "../components/index/WhyUsSection"
 const Home: NextPage = () => {
   return (
     <>
-      <Navbar />
+      {/* <div className="flex flex-col mt-20"> */}
       <HeroSection />
       <TrustedSection />
       <OurCourseSection />
       <WhyUsSection />
       <AboutUsSection />
-      <Footer />
+      {/* </div> */}
     </>
   )
 }
