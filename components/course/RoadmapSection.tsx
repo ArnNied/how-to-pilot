@@ -34,7 +34,7 @@ const SELECTED_COURSES = [
   },
   {
     key: "javascript",
-    icon: "/assets/images/index/our-course/javascript-course.svg",
+    icon: "/assets/images/index/our-course/java-course.svg",
     title: "Mastering React JS",
     description: "react is one of the most favorite framework",
     link: "#",
