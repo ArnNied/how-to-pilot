@@ -1,14 +1,16 @@
 import { nanoid } from "nanoid"
-import { NextPage } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import TextTruncate from "react-text-truncate"
 import ArrowSVG from "~/assets/icons/common/arrow-right.svg"
+
+import Card from "../common/Card"
 
 // TODO: IMPORT CORRECT IMAGE
 const COURSES = [
   {
     key: nanoid(),
-    image: "/assets/images/index/our-course/java-course.svg",
+    imageSrc: "/assets/images/index/our-course/java-course.svg",
     title: "Javascript Beginner Class",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -16,7 +18,7 @@ const COURSES = [
   },
   {
     key: nanoid(),
-    image: "/assets/images/index/our-course/java-course.svg",
+    imageSrc: "/assets/images/index/our-course/java-course.svg",
     title: "CSS",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -24,7 +26,7 @@ const COURSES = [
   },
   {
     key: nanoid(),
-    image: "/assets/images/index/our-course/java-course.svg",
+    imageSrc: "/assets/images/index/our-course/java-course.svg",
     title: "HTML Hacking Class",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -32,7 +34,7 @@ const COURSES = [
   },
   {
     key: nanoid(),
-    image: "/assets/images/index/our-course/java-course.svg",
+    imageSrc: "/assets/images/index/our-course/java-course.svg",
     title: "Python Tamer Proffesional",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -40,7 +42,7 @@ const COURSES = [
   },
   {
     key: nanoid(),
-    image: "/assets/images/index/our-course/java-course.svg",
+    imageSrc: "/assets/images/index/our-course/java-course.svg",
     title: "PHP Universal Scam Center",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -48,7 +50,7 @@ const COURSES = [
   },
   {
     key: nanoid(),
-    image: "/assets/images/index/our-course/java-course.svg",
+    imageSrc: "/assets/images/index/our-course/java-course.svg",
     title: "C# Musical Melody Class",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -56,7 +58,7 @@ const COURSES = [
   },
   {
     key: nanoid(),
-    image: "/assets/images/index/our-course/java-course.svg",
+    imageSrc: "/assets/images/index/our-course/java-course.svg",
     title: "Java Barista Expert Class",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -64,7 +66,7 @@ const COURSES = [
   },
   {
     key: nanoid(),
-    image: "/assets/images/index/our-course/java-course.svg",
+    imageSrc: "/assets/images/index/our-course/java-course.svg",
     title: "Ruby Gem Miner Class",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -72,7 +74,7 @@ const COURSES = [
   },
   {
     key: nanoid(),
-    image: "/assets/images/index/our-course/java-course.svg",
+    imageSrc: "/assets/images/index/our-course/java-course.svg",
     title: "Golang Traveling Class",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -80,7 +82,7 @@ const COURSES = [
   },
   {
     key: nanoid(),
-    image: "/assets/images/index/our-course/java-course.svg",
+    imageSrc: "/assets/images/index/our-course/java-course.svg",
     title: "Rust Cleaning Home Class",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -88,7 +90,7 @@ const COURSES = [
   },
   {
     key: nanoid(),
-    image: "/assets/images/index/our-course/java-course.svg",
+    imageSrc: "/assets/images/index/our-course/java-course.svg",
     title: "Flutter Flexible Yoga Class",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -97,7 +99,7 @@ const COURSES = [
 
   {
     key: nanoid(),
-    image: "/assets/images/index/our-course/java-course.svg",
+    imageSrc: "/assets/images/index/our-course/java-course.svg",
     title: "Swift Running Athlete Class",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -105,7 +107,7 @@ const COURSES = [
   },
   {
     key: nanoid(),
-    image: "/assets/images/index/our-course/java-course.svg",
+    imageSrc: "/assets/images/index/our-course/java-course.svg",
     title: "SQL Dolphin Riding Class",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -113,7 +115,7 @@ const COURSES = [
   },
   {
     key: nanoid(),
-    image: "/assets/images/index/our-course/java-course.svg",
+    imageSrc: "/assets/images/index/our-course/java-course.svg",
     title: "Haskell Aero Missile Class",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -121,7 +123,7 @@ const COURSES = [
   },
   {
     key: nanoid(),
-    image: "/assets/images/index/our-course/java-course.svg",
+    imageSrc: "/assets/images/index/our-course/java-course.svg",
     title: "C++ Body Massage Class",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -129,7 +131,7 @@ const COURSES = [
   },
   {
     key: nanoid(),
-    image: "/assets/images/index/our-course/java-course.svg",
+    imageSrc: "/assets/images/index/our-course/java-course.svg",
     title: "R What?",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -137,7 +139,7 @@ const COURSES = [
   },
 ]
 
-const CourseSection: NextPage = () => {
+const CourseSection = () => {
   return (
     <div className="flex flex-col px-32 pb-16 space-y-8">
       <div className="flex flex-row justify-between">
@@ -166,35 +168,18 @@ const CourseSection: NextPage = () => {
         </div>
       </div>
       <div className="grid grid-cols-4 gap-5">
-        {COURSES.map(({ key, image, title, description, link }) => (
-          <div
+        {COURSES.map(({ key, imageSrc, title, description, link }) => (
+          <Card
             key={key}
-            className="flex rounded-lg box-shadow-on-hover-with-ring-br"
-          >
-            <div className="w-full flex flex-col p-8 bg-white hover:bg-primary-base rounded-lg">
-              <div className="flex flex-row items-center space-x-4">
-                <div className="flex w-1/3 items-center">
-                  <div className="relative w-16 h-16">
-                    <Image src={image} layout="fill" />
-                  </div>
-                </div>
-
-                <h4 className="w-2/3 flex font-semibold text-xl">{title}</h4>
-              </div>
-              <div className="flex mt-4 mb-4">
-                <p className="text-sm">{description}</p>
-              </div>
-              <div className="flex mt-auto">
-                <Link href={link}>
-                  <a className="w-full flex flex-row justify-between items-center text-tertiary-blue hover:text-tertiary-orange group">
-                    Learn More {/* <span className="relative"> */}
-                    <ArrowSVG className="fill-tertiary-blue group-hover:fill-tertiary-orange" />
-                    {/* </span> */}
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </div>
+            imageSrc={imageSrc}
+            title={title}
+            description={description}
+            link={link}
+            titleNextToImage={true}
+            imageSize="w-14 h-14"
+            truncateAfter={2}
+            titleSize="text-lg"
+          />
         ))}
       </div>
     </div>

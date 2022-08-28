@@ -1,4 +1,4 @@
-import { NextPage } from "next"
+import type { NextPage } from "next"
 
 import CourseSection from "../components/course/CourseSection"
 import RoadmapSection from "../components/course/RoadmapSection"

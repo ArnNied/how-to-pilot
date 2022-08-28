@@ -33,7 +33,7 @@ const CONTENT = [
   },
 ]
 
-const WhyUsSection: NextPage = () => {
+const WhyUsSection = () => {
   function handleToggleText(clickedElementIndex: number) {
     const clickedEl = document.getElementById(
       convertToId(CONTENT[clickedElementIndex].title)
@@ -82,7 +82,7 @@ const WhyUsSection: NextPage = () => {
                   0{index + 1}
                 </div>
                 <div className="w-11/12 flex flex-row justify-between">
-                  <h4 className="flex font-semibold ">{title}</h4>
+                  <h4 className="flex font-semibold text-lg">{title}</h4>
                   <div className="flex">V</div>
                 </div>
               </button>
@@ -92,9 +92,11 @@ const WhyUsSection: NextPage = () => {
               >
                 <div className="w-1/12"></div>
                 <div className="w-11/12 flex flex-col space-y-2">
-                  <p>{description}</p>
+                  <p className="text-secondary-lighter text-sm">
+                    {description}
+                  </p>
                   <Link href={link}>
-                    <a className="w-fit flex flex-row items-center text-base text-tertiary-blue hover:text-tertiary-orange group">
+                    <a className="w-fit flex flex-row items-center text-sm text-tertiary-blue hover:text-tertiary-orange group">
                       Learn More
                       <span className="ml-4 w-fit h-full flex items-center">
                         <Arrow className="fill-tertiary-blue group-hover:fill-tertiary-orange" />

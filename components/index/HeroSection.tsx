@@ -1,14 +1,13 @@
-import { NextPage } from "next"
 import Image from "next/image"
 import Link from "next/link"
 
-const HeroSection: NextPage = () => {
+const HeroSection = () => {
   return (
     <div className="h-screen flex flex-row -mt-20">
       <div className="w-7/12 flex items-center">
         <div className="flex flex-col md:px-16 lg:px-24 space-y-8">
           <div className="w-fit flex items-center space-x-4">
-            <span className="w-20 h-0 border border-black"></span>
+            <span className="w-16 h-0 border-2 border-black"></span>
             <h1 className="font-bold text-sm">LEARN LIKE A PILOT</h1>
           </div>
           <h2 className="w-full flex font-bold text-6xl leading-snug">

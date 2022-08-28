@@ -1,47 +1,46 @@
-import { NextPage } from "next"
-import Image from "next/image"
-import Link from "next/link"
-import Arrow from "~/assets/icons/common/arrow-right.svg"
+import { nanoid } from "nanoid"
+
+import Card from "../common/Card"
 
 const SELECTED_COURSES = [
   {
-    key: "react",
-    icon: "/assets/images/index/our-course/react-course.svg",
+    key: nanoid(),
+    imageSrc: "/assets/images/index/our-course/react-course.svg",
     title: "Mastering React JS",
     description: "react is one of the most favorite framework",
     link: "#",
   },
   {
-    key: "python",
-    icon: "/assets/images/index/our-course/python-course.svg",
+    key: nanoid(),
+    imageSrc: "/assets/images/index/our-course/python-course.svg",
     title: "Python For Ai",
     description: "learning ai is fun, start your first ai with python",
     link: "#",
   },
   {
-    key: "grid",
-    icon: "/assets/images/index/our-course/grid-course.svg",
+    key: nanoid(),
+    imageSrc: "/assets/images/index/our-course/grid-course.svg",
     title: "GRID for dummy",
     description: "learn grid with absolutely beginner",
     link: "#",
   },
   {
-    key: "interview",
-    icon: "/assets/images/index/our-course/interview-course.svg",
+    key: nanoid(),
+    imageSrc: "/assets/images/index/our-course/interview-course.svg",
     title: "Coding interview",
     description: "having trouble getting an interview?",
     link: "#",
   },
   {
-    key: "javascript",
-    icon: "/assets/images/index/our-course/java-course.svg",
+    key: nanoid(),
+    imageSrc: "/assets/images/index/our-course/java-course.svg",
     title: "Mastering React JS",
     description: "react is one of the most favorite framework",
     link: "#",
   },
 ]
 
-const OurCourseSection: NextPage = () => {
+const OurCourseSection = () => {
   return (
     <div className="flex flex-col px-32 py-16">
       <div className="flex flex-col space-y-4">
@@ -50,36 +49,18 @@ const OurCourseSection: NextPage = () => {
           Browse Our Best Courses
         </h3>
       </div>
-      <div className="flex flex-row px-12 mt-16 space-x-4">
-        {SELECTED_COURSES.map(({ key, icon, title, description, link }) => (
-          <div
+      <div className="grid grid-cols-5 gap-x-5 px-12 mt-16">
+        {SELECTED_COURSES.map(({ key, imageSrc, title, description, link }) => (
+          <Card
             key={key}
-            className="w-1/5 flex flex-col p-8 bg-white hover:bg-primary-base rounded-lg box-shadow-on-hover-with-ring-br"
-          >
-            <div className="h-full flex flex-col justify-between space-y-2">
-              <div className="flex flex-col">
-                <div className="relative w-12 h-12">
-                  <Image src={icon} layout="fill" alt={key} />
-                </div>
-                <div className="flex flex-col space-y-2">
-                  <h3 className="font-bold text-secondary-light text-2xl">
-                    {title}
-                  </h3>
-                  <p className="text-secondary-lighter text-base">
-                    {description}
-                  </p>
-                </div>
-              </div>
-              <Link href={link}>
-                <a className="w-fit flex flex-row items-center text-base text-tertiary-blue hover:text-tertiary-orange group">
-                  Learn More
-                  <span className="ml-4 w-fit h-full flex items-center">
-                    <Arrow className="fill-tertiary-blue group-hover:fill-tertiary-orange" />
-                  </span>
-                </a>
-              </Link>
-            </div>
-          </div>
+            imageSrc={imageSrc}
+            title={title}
+            description={description}
+            link={link}
+            titleNextToImage={false}
+            imageSize="w-16 h-16"
+            titleSize="text-xl"
+          />
         ))}
       </div>
     </div>

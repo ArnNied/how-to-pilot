@@ -1,4 +1,3 @@
-import { NextPage } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import FacebookSVG from "~/assets/icons/common/facebook-icon.svg"
@@ -6,7 +5,7 @@ import GithubSVG from "~/assets/icons/common/github-icon.svg"
 import InstagramSVG from "~/assets/icons/common/instagram-icon.svg"
 import LinkedinSVG from "~/assets/icons/common/linkedin-icon.svg"
 
-const Footer: NextPage = () => {
+const Footer = () => {
   return (
     <div className="flex flex-col px-32 bg-secondary-base">
       <div className="flex flex-row justify-between items-center py-12">

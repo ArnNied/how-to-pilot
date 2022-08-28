@@ -1,41 +1,39 @@
-import { NextPage } from "next"
+import { nanoid } from "nanoid"
 import Image from "next/image"
 
 const COMPANIES = [
   {
-    key: "discord",
+    key: nanoid(),
     image: "/assets/images/index/trusted/discord-logo.svg",
   },
   {
-    key: "coinbase",
+    key: nanoid(),
     image: "/assets/images/index/trusted/coinbase-logo.svg",
   },
   {
-    key: "spotify",
+    key: nanoid(),
     image: "/assets/images/index/trusted/spotify-logo.svg",
   },
   {
-    key: "github",
+    key: nanoid(),
     image: "/assets/images/index/trusted/github-logo.svg",
   },
   {
-    key: "zoom",
+    key: nanoid(),
     image: "/assets/images/index/trusted/zoom-logo.svg",
   },
   {
-    key: "twitch",
+    key: nanoid(),
     image: "/assets/images/index/trusted/twitch-logo.svg",
   },
 ]
 
-const TrustedSection: NextPage = () => {
+const TrustedSection = () => {
   return (
     <div className="flex flex-col px-16 pt-8 bg-secondary-base">
-      {/* <div className="flex justify-center"> */}
       <h2 className="font-semibold text-primary-base text-2xl text-center">
         Trusted In Many Company
       </h2>
-      {/* </div> */}
       <div className="flex flex-row justify-center items-center sm:space-x-12 md:space-x-20 lg:space-x-28">
         {COMPANIES.map(({ key, image }) => (
           <div key={key} className="w-1/12">

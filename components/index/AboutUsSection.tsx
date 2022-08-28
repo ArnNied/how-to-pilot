@@ -1,8 +1,7 @@
-import { NextPage } from "next"
 import Image from "next/image"
 import Link from "next/link"
 
-const AboutUsSection: NextPage = () => {
+const AboutUsSection = () => {
   return (
     <div className="flex flex-row items-center px-32 py-16 space-x-12">
       <div className="w-5/12 flex flex-col space-y-4">
@@ -16,7 +15,7 @@ const AboutUsSection: NextPage = () => {
             have the opportunity to learn.
           </p>
           <Link href="#">
-            <a className="w-fit px-4 py-2 hover:bg-tertiary-orange border-2 border-secondary-base rounded box-shadow-on-hover-br">
+            <a className="w-fit px-4 py-2 hover:bg-tertiary-orange font-semibold border-2 border-secondary-base rounded box-shadow-on-hover-br">
               Learn More
             </a>
           </Link>

@@ -1,9 +1,8 @@
-import { NextPage } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import Arrow from "~/assets/icons/common/arrow-right.svg"
 
-const CommonNavbar: NextPage = () => {
+const CommonNavbar = () => {
   return (
     <nav className="fixed w-full flex flex-row bg-primary-base border-b-2 border-black divide-x-2 divide-black z-50">
       <div className="w-4/12">

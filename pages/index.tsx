@@ -1,7 +1,5 @@
 import type { NextPage } from "next"
 
-import Footer from "../components/common/Footer"
-import Navbar from "../components/common/Navbar"
 import AboutUsSection from "../components/index/AboutUsSection"
 import HeroSection from "../components/index/HeroSection"
 import OurCourseSection from "../components/index/OurCourseSection"
@@ -11,13 +9,11 @@ import WhyUsSection from "../components/index/WhyUsSection"
 const Home: NextPage = () => {
   return (
     <>
-      {/* <div className="flex flex-col mt-20"> */}
       <HeroSection />
       <TrustedSection />
       <OurCourseSection />
       <WhyUsSection />
       <AboutUsSection />
-      {/* </div> */}
     </>
   )
 }
