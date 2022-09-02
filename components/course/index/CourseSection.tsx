@@ -1,10 +1,7 @@
 import { nanoid } from "nanoid"
 import Image from "next/image"
-import Link from "next/link"
-import TextTruncate from "react-text-truncate"
-import ArrowSVG from "~/assets/icons/common/arrow-right.svg"
 
-import Card from "../common/Card"
+import Card from "../../common/Card"
 
 // TODO: IMPORT CORRECT IMAGE
 const COURSES = [

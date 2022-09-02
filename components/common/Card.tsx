@@ -10,9 +10,9 @@ type TProps = {
   title: string
   description: string
   link: string
-  titleNextToImage: boolean
   imageSize: string
   titleSize: string
+  titleNextToImage?: boolean
   truncateAfter?: number
 }
 
@@ -21,13 +21,13 @@ const CommonCard = ({
   title,
   description,
   link,
-  titleNextToImage,
   imageSize,
   titleSize,
+  titleNextToImage,
   truncateAfter,
 }: TProps) => {
   return (
-    <div className="flex flex-col p-8 bg-white hover:bg-primary-base rounded-lg box-shadow-on-hover-with-ring-br">
+    <div className="flex flex-col px-8 py-6 bg-white hover:bg-primary-base rounded-lg box-shadow-on-hover-with-ring-br">
       <div className="h-full flex flex-col">
         <div className="flex flex-col">
           <div

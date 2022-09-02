@@ -57,7 +57,6 @@ const OurCourseSection = () => {
             title={title}
             description={description}
             link={link}
-            titleNextToImage={false}
             imageSize="w-16 h-16"
             titleSize="text-xl"
           />

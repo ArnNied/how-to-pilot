@@ -1,8 +1,8 @@
 import { nanoid } from "nanoid"
 
-import Card from "../common/Card"
+import Card from "../../common/Card"
 
-const SELECTED_COURSES = [
+const COURSES = [
   {
     key: nanoid(),
     imageSrc: "/assets/images/index/our-course/react-course.svg",
@@ -52,14 +52,13 @@ const RoadmapSection = () => {
         </h3>
       </div>
       <div className="grid grid-cols-5 gap-x-5">
-        {SELECTED_COURSES.map(({ key, imageSrc, title, description, link }) => (
+        {COURSES.map(({ key, imageSrc, title, description, link }) => (
           <Card
             key={key}
             imageSrc={imageSrc}
             title={title}
             description={description}
             link={link}
-            titleNextToImage={false}
             imageSize="w-16 h-16"
             titleSize="text-xl"
           />

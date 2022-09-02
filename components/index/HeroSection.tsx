@@ -19,7 +19,13 @@ const HeroSection = () => {
             Learn programming easy and free only in How To Pilot. There are more
             than 50 free classes that you can access anytime and anywhere.
           </h3>
-          <ButtonWithRingShadow text="Join Now" />
+          <ButtonWithRingShadow
+            text="Join Now"
+            textColor="text-white group-hover:text-black"
+            buttonColor="bg-black group-hover:bg-tertiary-orange"
+            shadowColor="bg-primary-base group-hover:bg-black"
+            shadowBorderColor="border-black group-hover:border-black"
+          />
         </div>
       </div>
       <div className="w-5/12 px-8 py-24">
