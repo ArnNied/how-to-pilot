@@ -1,6 +1,7 @@
 import Image from "next/image"
 
 import ButtonWithRingShadow from "../../common/ButtonWithRingShadow"
+import Coin from "../../common/Coin"
 
 const InformationSection = () => {
   return (
@@ -17,14 +18,9 @@ const InformationSection = () => {
             Javascript Beginner Class
           </h2>
         </div>
-        <div className="flex flex-row space-x-2">
+        <div className="grid grid-cols-5 gap-x-2">
           {[...Array(5)].map((_, index) => (
-            <div className="flex flex-row items-center px-3 py-2 bg-white rounded shadow-lg space-x-2">
-              <div className="relative w-6 h-6">
-                <Image src="/assets/images/common/coin.svg" layout="fill" />
-              </div>
-              <p className="font-semibold text-xs">100 Coins</p>
-            </div>
+            <Coin amount={100} />
           ))}
         </div>
         <div className="flex">
