@@ -1,7 +1,9 @@
+import type { NextPage } from "next"
+
 import InformationSection from "../../components/course/detail/InformationSection"
 import SyllabusSection from "../../components/course/detail/SyllabusSection"
 
-const CourseDetail = () => {
+const CourseDetail: NextPage = () => {
   return (
     <>
       <InformationSection />
