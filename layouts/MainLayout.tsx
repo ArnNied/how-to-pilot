@@ -1,13 +1,12 @@
 import { PropsWithChildren } from "react"
 
 import Footer from "../components/common/Footer"
-import Navbar from "../components/common/Navbar"
+import MainLayoutWithoutFooter from "./MainLayoutWithoutFooter"
 
 const MainLayout = ({ children }: PropsWithChildren) => {
   return (
     <>
-      <Navbar />
-      <div className="flex flex-col pt-20">{children}</div>
+      <MainLayoutWithoutFooter>{children}</MainLayoutWithoutFooter>
       <Footer />
     </>
   )

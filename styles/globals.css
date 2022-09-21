@@ -19,3 +19,7 @@
     box-shadow: -5px 5px 0 0 black;
   }
 }
+
+.placeholder-right::placeholder {
+  text-align: end;
+}

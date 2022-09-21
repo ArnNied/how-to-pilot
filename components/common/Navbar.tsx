@@ -34,12 +34,12 @@ const CommonNavbar = () => {
         </a>
       </Link>
       <div className="w-auto flex flex-row justify-center px-16 py-4 space-x-4">
-        <Link href="#">
+        <Link href="/login">
           <a className="flex items-center px-4 py-2 bg-primary-base  hover:bg-tertiary-orange font-semibold border-2 border-black rounded box-shadow-on-hover-br">
             Sign In
           </a>
         </Link>
-        <Link href="#">
+        <Link href="/register">
           <a className="flex flex-row items-center px-4 py-2 bg-secondary-base hover:bg-tertiary-orange font-semibold text-white hover:text-black border-2 border-black rounded group box-shadow-on-hover-br">
             Register
             <div className="relative flex items-center p-2 ml-4">
